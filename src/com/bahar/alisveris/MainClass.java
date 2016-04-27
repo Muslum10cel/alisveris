@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package deneme;
+package com.bahar.alisveris;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author muslumoncel
  */
-public class Deneme {
+public class MainClass {
 
     static final List<TuketiciUrunleri> urunler = new ArrayList<>();
     static final List<Sepet> sepet = new ArrayList<>();
