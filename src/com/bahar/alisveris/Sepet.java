@@ -37,6 +37,6 @@ public class Sepet {
     public String toString() {
         return " Ürün Adı : " + urun_adi
                 + "\n Ürün Miktarı :" + miktar
-                + "\n Ürün Fiyatı : " + fiyat + "\n"; //To change body of generated methods, choose Tools | Templates.
+                + "\n Ürün Fiyatı : " + fiyat + " ₺\n"; //To change body of generated methods, choose Tools | Templates.
     }
 }
