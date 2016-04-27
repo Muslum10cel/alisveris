@@ -48,9 +48,22 @@ public class MainClass {
                     UrunListesi();
                     break;
                 case 2:
+                    System.out.print("Almak İstediğiniz Ürünün Adını Giriniz : ");
+                    String urun = klavye.nextLine();
+                    System.out.print("Almak İstediğiniz Miktarı Giriniz : ");
+                    int mik = scanner.nextInt();
+
+                    for (int i = 0; i < urunler.size(); i++) {
+                        if (urunler.get(i).getUrun_adi().equals(urun) && urunler.get(i).getMiktar() > 0) {
+                            if (sepet.add(new Sepet(urun, urunler.get(i).getSatis_fiyati() * mik, mik))) {
+                                System.out.println("Ürün Başarıyla Sepete Eklendi");
+                            }
+                        }
+                    }
                     break;
                 default:
-
+                    SepetiGoster();
+                    System.exit(1);
             }
         }
     }
@@ -117,6 +130,16 @@ public class MainClass {
         System.out.println("*************** Urun Listesi ***************");
         urunler.stream().forEach((urun) -> {
             System.out.println(urun.toString());
+        });
+    }
+
+    /**
+     * Bu method müşterinin sepetini yazdırmaktadır.
+     */
+    public static void SepetiGoster() {
+        System.out.println("*************** Sepette Bulunan Ürünler ***************");
+        sepet.stream().forEach((spt) -> {
+            System.out.println(spt.toString());
         });
     }
 

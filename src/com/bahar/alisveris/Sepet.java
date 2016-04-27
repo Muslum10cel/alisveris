@@ -13,10 +13,12 @@ public class Sepet {
 
     private final String urun_adi;
     private final double fiyat;
+    private final int miktar;
 
-    public Sepet(String urun_adi, double fiyat) {
+    public Sepet(String urun_adi, double fiyat, int miktar) {
         this.urun_adi = urun_adi;
         this.fiyat = fiyat;
+        this.miktar = miktar;
     }
 
     public double getFiyat() {
@@ -27,4 +29,14 @@ public class Sepet {
         return urun_adi;
     }
 
+    public int getMiktar() {
+        return miktar;
+    }
+
+    @Override
+    public String toString() {
+        return " Ürün Adı : " + urun_adi
+                + "\n Ürün Miktarı :" + miktar
+                + "\n Ürün Fiyatı : " + fiyat + "\n"; //To change body of generated methods, choose Tools | Templates.
+    }
 }

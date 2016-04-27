@@ -55,7 +55,7 @@ public class TuketiciUrunleri {
                 + "\n Ürün Miktarı :  " + miktar
                 + "\n Ürün Alış Fiyatı : " + alis_fiyati + " ₺"
                 + "\n Ürün KDV si :  " + KDV
-                + "\n Ürün satış fiyatı :  " + satis_fiyati + " ₺";
+                + "\n Ürün satış fiyatı :  " + satis_fiyati + " ₺ \n";
     }
 
 }
