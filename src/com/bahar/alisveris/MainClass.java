@@ -125,7 +125,7 @@ public class MainClass {
      * @param fiy KDV'li satış miktarı hesaplanacak olan ürünün alış fiyatı
      * @param kdv KDVHesapla metodundan alınan KDV miktarı
      * @return
-     * @see KDVHesapla
+     * @see #KDVHesapla
      */
     public static double KDVliSatisHesapla(double fiy, double kdv) {
         return fiy + kdv;
