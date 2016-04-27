@@ -12,7 +12,7 @@ package com.bahar.alisveris;
 public class TuketiciUrunleri {
 
     private final String urun_adi, urun_sinifi;
-    private final int miktar;
+    private int miktar;
     private final double alis_fiyati, KDV, satis_fiyati;
 
     public TuketiciUrunleri(String urun_adi, String urun_sinifi, int miktar, double alis_fiyati, double KDV, double satis_fiyati) {
@@ -46,6 +46,10 @@ public class TuketiciUrunleri {
 
     public String getUrun_sinifi() {
         return urun_sinifi;
+    }
+
+    public void setMiktar(int miktar) {
+        this.miktar = miktar;
     }
 
     @Override

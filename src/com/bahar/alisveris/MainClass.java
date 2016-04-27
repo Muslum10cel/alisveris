@@ -53,10 +53,18 @@ public class MainClass {
                     System.out.print("Almak İstediğiniz Miktarı Giriniz : ");
                     int mik = scanner.nextInt();
 
+                    /**
+                     * Buradaki döngüde kullanıcının girdiği ürünü ilk önce ürün
+                     * listesinde arıyoruz. Eğer ürün listede var ve ürünün
+                     * miktarı da 0'dan büyükse alışveriş sepetine ekliyoruz ve
+                     * kullanıcının girdiği miktarı stoktan düşüyoruz. eğer
+                     * değilse alışveriş sepetine eklemiyoruz
+                     */
                     for (int i = 0; i < urunler.size(); i++) {
                         if (urunler.get(i).getUrun_adi().equals(urun) && urunler.get(i).getMiktar() > 0) {
                             if (sepet.add(new Sepet(urun, urunler.get(i).getSatis_fiyati() * mik, mik))) {
                                 System.out.println("Ürün Başarıyla Sepete Eklendi");
+                                urunler.get(i).setMiktar(urunler.get(i).getMiktar() - mik);
                             }
                         }
                     }
